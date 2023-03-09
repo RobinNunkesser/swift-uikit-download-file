@@ -17,17 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pa-tb-MVR">
-                                <rect key="frame" x="175" y="416" width="42" height="21"/>
+                                <rect key="frame" x="176" y="416" width="41.333333333333343" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw0-q1-mHE">
+                                <rect key="frame" x="0.0" y="767.66666666666663" width="393" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VA9-sF-A9A">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Pause"/>
+                                        <connections>
+                                            <action selector="cancelDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ggD-wg-m3X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIF-dx-7KH">
+                                        <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Resume"/>
+                                        <connections>
+                                            <action selector="resumeDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5s-uo-Ivp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3Pa-tb-MVR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1gh-d6-BUI"/>
+                            <constraint firstItem="rw0-q1-mHE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Leq-en-Bge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rw0-q1-mHE" secondAttribute="bottom" constant="16" id="NAj-eO-ne5"/>
+                            <constraint firstItem="rw0-q1-mHE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="VJb-4X-xuA"/>
                             <constraint firstItem="3Pa-tb-MVR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f6m-cX-5Dq"/>
+                            <constraint firstItem="rw0-q1-mHE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nhi-0m-nvk"/>
                         </constraints>
                     </view>
                     <connections>
